@@ -1,1 +1,13 @@
+name: Notify on Commit
 
+on:
+  push:
+    branches:
+      - main  # or whichever branch you want
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Commit Message
+        run: echo "🚀 You just pushed a commit!"
